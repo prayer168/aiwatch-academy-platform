@@ -65,3 +65,10 @@
 - **部署建議/狀態**：建議 Vercel Preview 作 Next.js UI/公開頁預覽，正式會員服務仍待 Supabase/Auth/RLS 驗收與核定設定。嘗試建立 Vercel 專案時 API 回覆需先安裝 GitHub Integration；建立未成功，沒有部署網址或 Vercel project。待 Vercel team 對此 repo 授權 GitHub App 後再連結並部署 Preview。
 - **GitHub Actions**：commit `37cc952` 的 CI run `40241649438` 通過：`npm ci`、lint、typecheck、build 全部成功。Runner 提示 checkout/setup-node v4 與未來 Ubuntu image 遷移為非阻擋性提醒。
 - **版本**：維持 `0.3.0`；會員資料庫/Auth 端到端驗收未完成。
+
+## 2026-10-26 — Vercel Preview 連線重試
+
+- **前置確認**：本機 `HEAD` 與 GitHub `origin/main` 同為 `3431b46`，工作樹乾淨；公開 repo `prayer168/aiwatch-academy-platform` 的預設分支為 `main`。Vercel team 為 `prayer168's projects`，未找到同名既有專案。
+- **重試結果**：使用 `github-limited` 建立 Vercel Next.js 專案時仍回報需要在該連線帳號新增 GitHub Login Connection；以 `github` 類型重試則回報需安裝 GitHub Integration。兩次建立皆失敗，沒有建立 Vercel 專案、Preview 部署或部署網址。
+- **設定狀態**：沒有建立或寫入 Supabase 憑證、Vercel 環境變數；沒有部署到 Production。需確認此次 Vercel API 所屬帳號/team 的 GitHub Login Connection 與 GitHub Integration 均可用，之後再重試。
+- **版本/Git**：版本仍為 `0.3.0`；會員功能仍未完成 Supabase 端到端驗收。此歷程更新尚未 commit/push。
