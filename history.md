@@ -87,3 +87,12 @@
 - **設定/版本**：未寫入 Supabase 憑證或任何 Vercel 環境變數，未部署 Production；版本維持 `0.3.0`。
 - **待辦**：需要讓目前 Codex Vercel API 使用的 team/account 可見 GitHub Login Connection 與 GitHub Integration，連線生效後再建置 Preview。
 - **本紀錄狀態**：本次追加尚待 commit/push。
+
+## 2026-10-26 — Vercel GitHub 專案建立再試
+
+- **GitHub/工作樹**：確認本機 `main`、`origin/main` 同為 `5ba5419`（`Record Vercel authorization retry`），操作前工作樹乾淨。公開 repository 為 `prayer168/aiwatch-academy-platform`。
+- **Vercel 專案查詢**：在 `prayer168's projects` team 查詢同名專案，結果為 0 筆。
+- **建立/部署重試**：以 Vercel Git 專案建立工具指定 GitHub repo、Next.js 專案名稱 `aiwatch-academy-platform`、root directory `apps/web`，並要求建立 Preview。Vercel API 回覆 400 `you need to install the GitHub integration first`（request id `icn1:sfo1::db54n-1792969942795-fc66c73f0132`）；建立失敗，沒有專案、Preview deployment 或網站網址。未改試非 GitHub 來源或建立未連結的空專案。
+- **安全/版本**：未設定 Supabase 憑證或 Vercel 環境變數，未部署 Production；版本仍為 `0.3.0`。
+- **後續阻塞**：這次 Vercel API 連線對指定 team 仍判定 GitHub Integration 未安裝；需在 Vercel team 將 GitHub Integration 安裝並允許此 repo 後，才能重試連結與 Preview 部署。
+- **Git**：本筆歷程待 commit/push。
