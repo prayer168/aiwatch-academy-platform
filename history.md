@@ -79,3 +79,11 @@
 - **Vercel 重試**：確認 GitHub main 與本機都在 `ffda521`、工作樹乾淨；Vercel team 專案清單仍無同名專案。再次建立 `aiwatch-academy-platform`（Next.js、root directory `apps/web`、連接 GitHub repository）仍因 `github-limited` Login Connection 缺失回覆 400，沒有建立專案或部署。之前嘗試 `github` 類型也提示 GitHub Integration 未安裝。
 - **安全/版本**：沒有建立環境變數或 Supabase 憑證，沒有 Production 部署；版本維持 `0.3.0`。要繼續需確認 Vercel API 所屬登入帳號/team 的 GitHub Login Connection 與 GitHub Integration 狀態。
 - **本紀錄狀態**：本次追加尚待 commit/push。
+
+## 2026-10-26 — Vercel Preview 授權確認後重試
+
+- **GitHub/本機狀態**：操作前 `HEAD` 與 `origin/main` 相同，為 `4383f14`；工作樹乾淨。GitHub repo 為公開，預設分支 `main`。
+- **Vercel 狀態**：`prayer168's projects` team 尚無 `aiwatch-academy-platform` 專案。使用 `github-limited` 與 `github` 兩種 GitHub 連線類型重試建立 Next.js 專案（root directory `apps/web`），分別仍回報 Login Connection 缺失與 GitHub Integration 缺失。沒有建立專案或 Preview deployment，因此目前沒有網站預覽連結。
+- **設定/版本**：未寫入 Supabase 憑證或任何 Vercel 環境變數，未部署 Production；版本維持 `0.3.0`。
+- **待辦**：需要讓目前 Codex Vercel API 使用的 team/account 可見 GitHub Login Connection 與 GitHub Integration，連線生效後再建置 Preview。
+- **本紀錄狀態**：本次追加尚待 commit/push。
