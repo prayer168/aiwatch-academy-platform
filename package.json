@@ -1,0 +1,13 @@
+{
+  "name": "aiwatch-academy-platform",
+  "version": "0.3.0",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "npm run dev --workspace @aiwatch/web",
+    "build": "npm run build --workspace @aiwatch/web",
+    "lint": "npm run lint --workspace @aiwatch/web",
+    "typecheck": "npm run typecheck --workspace @aiwatch/web"
+  },
+  "engines": { "node": ">=24", "npm": ">=11" }
+}
