@@ -72,3 +72,10 @@
 - **重試結果**：使用 `github-limited` 建立 Vercel Next.js 專案時仍回報需要在該連線帳號新增 GitHub Login Connection；以 `github` 類型重試則回報需安裝 GitHub Integration。兩次建立皆失敗，沒有建立 Vercel 專案、Preview 部署或部署網址。
 - **設定狀態**：沒有建立或寫入 Supabase 憑證、Vercel 環境變數；沒有部署到 Production。需確認此次 Vercel API 所屬帳號/team 的 GitHub Login Connection 與 GitHub Integration 均可用，之後再重試。
 - **版本/Git**：版本仍為 `0.3.0`；會員功能仍未完成 Supabase 端到端驗收。此歷程更新尚未 commit/push。
+
+## 2026-10-26 — 歷程推送與 Vercel 再試
+
+- **Git**：將前一筆 Vercel 重試歷程 commit 為 `ffda521`（`Record Vercel preview connection retry`）並成功 push 至 `origin/main`。
+- **Vercel 重試**：確認 GitHub main 與本機都在 `ffda521`、工作樹乾淨；Vercel team 專案清單仍無同名專案。再次建立 `aiwatch-academy-platform`（Next.js、root directory `apps/web`、連接 GitHub repository）仍因 `github-limited` Login Connection 缺失回覆 400，沒有建立專案或部署。之前嘗試 `github` 類型也提示 GitHub Integration 未安裝。
+- **安全/版本**：沒有建立環境變數或 Supabase 憑證，沒有 Production 部署；版本維持 `0.3.0`。要繼續需確認 Vercel API 所屬登入帳號/team 的 GitHub Login Connection 與 GitHub Integration 狀態。
+- **本紀錄狀態**：本次追加尚待 commit/push。
