@@ -75,5 +75,9 @@ Facebook、YouTube、官網、LINE 與電子報導流至共同會員中心；資
 
 ## GitHub 提案
 
-待確認 GitHub owner、repository 名稱與可見度後再初始化 Git 並設定 remote。建議私有 repository、feature branch + Pull Request，CI 通過和人工驗收後合併 `main`。推送前檢查 staged diff，禁止提交密鑰/個資，不直接 force push。此工作目錄目前尚未初始化 Git，也沒有 commit/push。
+GitHub repository：[`prayer168/aiwatch-academy-platform`](https://github.com/prayer168/aiwatch-academy-platform)，目前為 **Public**，`main` 已推送初始 commit。後續建議以 feature branch + Pull Request，CI 通過及人工驗收後合併 `main`；禁止提交密鑰/個資與 force push。
+
+## 部署建議
+
+建議先用 Vercel Preview 部署 Next.js 網站，適合檢視公開頁和 UI，且可為分支/PR 產生獨立預覽網址；目前 Vercel 尚未連結此 repository，因 Vercel team 尚未安裝 GitHub Integration，部署未建立。即使預覽成功，Supabase 未設定時會員流程仍會明確顯示未設定。Supabase/RLS/Auth 本機驗收完成、正式環境變數與條款核定前，不建議將其視為正式會員服務上線。
 

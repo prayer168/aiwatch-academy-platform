@@ -57,3 +57,10 @@
 - **資料庫/Auth 驗收阻塞**：缺少 Supabase CLI、Docker，故 migration 未能套用，RLS pgTAP 未能執行；Auth/Inbucket 註冊確認、登入、登出、忘記/重設密碼尚無可連線的本機服務，不能宣稱端對端驗收通過。
 - **版本與狀態**：程式建置完成，但資料庫/RLS/Auth 驗收尚未完成；版本維持 `0.3.0`，不提升至 `0.4.0`。
 - **Git**：依要求未執行 init、commit、push。
+
+## 2026-10-26 — 公開 GitHub repository 與部署規劃
+
+- **GitHub**：依使用者明確要求初始化 Git，建立 `main` 分支與初始 commit `befc6e3`（`Initial AI Watch Academy platform`），建立並推送至公開 repository [`prayer168/aiwatch-academy-platform`](https://github.com/prayer168/aiwatch-academy-platform)。push 成功，遠端追蹤分支 `origin/main` 已設定。
+- **公開前檢查**：確認 `.env.example` 僅含空白 Supabase URL/public key/site URL；常見 GitHub/Supabase/Stripe token 與 private key pattern 未命中；`.gitignore` 排除 `.env*`（例外 `.env.example`）、node_modules、Next.js build output 與 `.vercel`。未提交本機 `.env.local` 或生成 bundle。
+- **部署建議/狀態**：建議 Vercel Preview 作 Next.js UI/公開頁預覽，正式會員服務仍待 Supabase/Auth/RLS 驗收與核定設定。嘗試建立 Vercel 專案時 API 回覆需先安裝 GitHub Integration；建立未成功，沒有部署網址或 Vercel project。待 Vercel team 對此 repo 授權 GitHub App 後再連結並部署 Preview。
+- **版本**：維持 `0.3.0`；會員資料庫/Auth 端到端驗收未完成。
